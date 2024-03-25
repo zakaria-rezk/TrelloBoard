@@ -20,7 +20,7 @@ const updateHeight = (e: any) => {
 
 // fire add task emit
 function addTask(e: Event) {
-  if (title.value.trim != "") {
+  if (title.value.trim() !='') {
     e.preventDefault();
     emit("add", {
       id: nanoid(),

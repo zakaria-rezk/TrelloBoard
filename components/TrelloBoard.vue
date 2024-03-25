@@ -13,6 +13,11 @@ const columns = ref<Column[]>([
         title: "lets do it",
         createdAt: new Date().toISOString(),
       },
+      {
+        id: nanoid(),
+        title: "lets do agaaaain it",
+        createdAt: new Date().toISOString(),
+      },
     ],
   },
 ]);
@@ -28,6 +33,7 @@ const alt = useKeyModifier("Alt");
       :animation="150"
       handle=".drag-handle"
       class="flex items-start overflow-x-auto"
+      
     >
       <template #item="{ element: col }">
         <div class="row bg-gray-200 min-w-[250px] p-5 rounded">
@@ -39,7 +45,7 @@ const alt = useKeyModifier("Alt");
             :animation="150"
           >
             <template #item="{ element: tasks }">
-              <Task :task="tasks" />
+              <Task :task="tasks" @Delete="col.tasks = col.tasks.filter(t => t.id != $event)" />
             </template>
           </draggaable>
 
