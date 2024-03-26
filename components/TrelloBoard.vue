@@ -7,7 +7,39 @@ import draggaable from "vuedraggable";
 const columns = ref<Column[]>([
   {
     id: nanoid(),
-    title: " today tasks ",
+    title: "Frontend team tasks",
+    tasks: [
+      {
+        id: nanoid(),
+        title: "lets do it",
+        createdAt: new Date().toISOString(),
+      },
+      {
+        id: nanoid(),
+        title: "lets do agaaaain it",
+        createdAt: new Date().toISOString(),
+      },
+    ],
+  },
+  {
+    id: nanoid(),
+    title: " today tasks",
+    tasks: [
+      {
+        id: nanoid(),
+        title: "lets do it",
+        createdAt: new Date().toISOString(),
+      },
+      {
+        id: nanoid(),
+        title: "lets do agaaaain it",
+        createdAt: new Date().toISOString(),
+      },
+    ],
+  }, 
+   {
+    id: nanoid(),
+    title: "in progress",
     tasks: [
       {
         id: nanoid(),
