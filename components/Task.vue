@@ -35,7 +35,7 @@ onKeyStroke('Delete', (e)=>{
      class="task bg-white max-w-[250px] p-2 mb-2 shadow-sm"
      tabindex="0"
      @focus="handel(task.id)"
-     @blur="focuesd = false"
+     @blur="focused = false"
      ref="seletedTask"
      :key="task.id"
   >
